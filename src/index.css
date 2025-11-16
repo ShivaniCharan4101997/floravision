@@ -1,0 +1,99 @@
+/*//global reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    /*display: block;*/
+    max-width: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/*Typography*/
+:root {
+    /* Colors */
+    --pure-white: #fff;
+    --dim-white: rgba(255, 255, 255, 0.75);
+    --yellow: #fff84e;
+    --another-white: rgba(255, 255, 255, 0.05);
+    --black: #000;
+    --gray: #1b2316;
+
+    /* Gradients */
+    --gradient-yellow-light: linear-gradient(to right, #fbd300 0%, #ffffff 100%);
+    --gradient-fade-x: linear-gradient(to right, rgba(255,255,255,0.20) 0%, #000 52%, rgba(255,255,255,0.20) 100%);
+    --gradient-green-dual: linear-gradient(to right, #55b000 0%, rgba(255,255,255,0.16) 50%, #50790b 100%);
+    --gradient-soft-fade: linear-gradient(to right, rgba(255,255,255,0.27) 0%, rgba(255,255,255,0%) 62%, rgba(255,255,255,0.33) 100%);
+    --gradient-contrast-fade: linear-gradient(to right, rgba(255,255,255,0.44) 0%, #000000 38%, rgba(255,255,255,0.33) 100%);
+    --gradient-light-gray: linear-gradient(to right, #ffffff 0%, #666666 43%);
+    --gradient-monochrome: linear-gradient(to right, #ffffff 0%, #000000 100%);
+}
+
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+    background: #1b2316;
+    color: #fff;
+    line-height: 1.5;
+    overflow-x: hidden;
+    height: 100dvh;
+}
+
+
+
+/*container*/
+.container {
+    width: 100%;
+    max-width: 1742px;
+    margin-inline: auto;
+    padding: 35px ;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-inline: 1rem;
+    }
+}

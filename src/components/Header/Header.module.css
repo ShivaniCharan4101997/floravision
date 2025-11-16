@@ -1,0 +1,91 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* LEFT SECTION ------------------------- */
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.logo{
+    width: 48px;
+    height: 48px;
+}
+ .logo img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+}
+
+.brandName {
+    color: var(--pure-white);
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+/* NAVBAR ------------------------------- */
+.nav {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    color: var(--pure-white);
+}
+
+.nav a:not(:last-child) {
+    margin-right: 72px;
+}
+
+.polygonImg {
+    width: 12px;
+    height: 7px;
+    padding-left: 20px;
+}
+
+.nav > *:hover {
+    color: #d9d9d9;
+}
+
+/* RIGHT SECTION ------------------------ */
+.right {
+    display: flex;
+    align-items: center;
+    color: var(--dim-white);
+}
+.right>*:not(:last-child) {
+    margin-right: 59px;
+}
+
+.icon {
+    width: 26px;
+    height: 26px;
+}
+
+/* HAMBURGER ---------------------------- */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 31px;
+    height: 3px;
+    background-color: var(--pure-white);
+    border-radius: 2px;
+}
+
+.short {
+    width: 23px !important;
+
+}
