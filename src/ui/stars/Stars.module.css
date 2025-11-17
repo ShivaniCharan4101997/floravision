@@ -1,0 +1,8 @@
+.starRating {
+    display: flex;
+    gap: 6px;
+}
+.starRating img {
+    width: 16px;
+    height: 16px;
+}

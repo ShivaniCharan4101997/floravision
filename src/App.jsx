@@ -1,4 +1,8 @@
 import Header from "./components/Header/Header.jsx";
+import Hero from "./components/Hero/Hero.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import OurBestO2 from "./components/OutBestO2/OurBestO2.jsx";
+import Review from "./components/CustomerReview/Review.jsx";
 
 
 const App = () => {
@@ -6,6 +10,16 @@ const App = () => {
         <div className="container">
         {/*  header and navbar*/}
             <Header />
+        {/*    hero*/}
+            <Hero/>
+
+        {/*customer review*/}
+            <Review/>
+        {/*    our best o2*/}
+            <OurBestO2/>
+
+        {/*    footer*/}
+            <Footer/>
         </div>
     );
 };

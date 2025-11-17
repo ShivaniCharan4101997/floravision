@@ -1,17 +1,11 @@
 import styles from "./Header.module.css";
+import Logo from "../../ui/Logo.jsx";
 
 const Header = () => {
     return (
         <header className={styles.header}>
             {/* logo */}
-            <div className={styles.left}>
-                <div className={styles.logo}>
-                <img src="/plant_1.png" alt="logo"/>
-
-                </div>
-                <span className={styles.brandName}>FloraVision.</span>
-
-            </div>
+            <Logo/>
 
             {/* navbar */}
             <nav className={styles.nav}>

@@ -1,0 +1,57 @@
+.wrapper{
+    max-width: 1600px;
+    font-family: Inter ,'sans-serif';
+    margin-bottom: 200px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.reviewWrapper{
+     position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 33px;
+}
+.reviewCard {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+}
+
+
+.reviewPara{
+    font-size: 20px;
+    color:var(--dim-white);
+    padding-top: 62px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+}
+
+
+.reviewBg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 88px;
+}
+
+
+.cardDetails {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+}
