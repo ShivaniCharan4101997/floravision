@@ -87,7 +87,7 @@ body {
 .container {
     width: 100%;
     max-width: 1678px;
-    margin-inline: auto;
+    margin: 0 auto;
     padding: 35px ;
 }
 

@@ -14,7 +14,7 @@ const App = () => {
         {/*    hero*/}
             <Hero/>
         {/*top-selling*/}
-        {/*    <TopSelling/>*/}
+            <TopSelling/>
         {/*customer review*/}
             <Review/>
         {/*    our best o2*/}

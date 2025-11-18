@@ -1,6 +1,5 @@
 .wrapper{
     max-width: 1600px;
-    font-family: Inter ,'sans-serif';
     margin-bottom: 200px;
 }
 
@@ -9,18 +8,46 @@
 }
 
 .reviewWrapper{
-     position: relative;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     column-gap: 33px;
+    padding-bottom: 200px;
 }
+
+
 .reviewCard {
     position: relative;
-    width: 512px;
+    width: 100%;
+    max-width: 512px;
     height: 480px;
-    /*height: auto;*/
     overflow: hidden;
 }
+
+.reviewBg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.cardDetails {
+    font-family: Inter ,'sans-serif';
+    position: absolute;
+    inset: 0;
+    padding: 40px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
+
 
 
 .reviewPara{
@@ -35,24 +62,97 @@
     column-gap: 32px;
 }
 
-
-.reviewBg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    /*border-radius: 88px;*/
+.image{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
 }
 
 
-.cardDetails {
-    position: relative;
-    z-index: 2;
-    padding: 40px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    /*justify-content: space-between;*/
+
+/* TABLET VIEW  */
+@media (max-width: 1024px) {
+
+    .reviewWrapper{
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+        padding-bottom: 150px;
+    }
+
+    .reviewCard{
+        height: 440px;
+    }
+
+    .cardDetails{
+        padding: 30px;
+    }
+
+    .reviewPara{
+        font-size: 18px;
+        padding-top: 40px;
+    }
+
+    .user img{
+        width: 65px;
+    }
+
+    .user h2{
+        font-size: 20px;
+    }
+}
+
+
+/* MOBILE (SINGLE COLUMN) */
+@media (max-width: 768px) {
+
+    .reviewWrapper{
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-bottom: 100px;
+        padding-inline: 20px;
+    }
+
+    .reviewCard{
+        max-width: 100%;
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .cardDetails{
+        padding: 24px;
+    }
+
+    .user{
+        column-gap: 20px;
+    }
+
+    .user img{
+        width: 55px;
+    }
+
+    .reviewPara{
+        font-size: 16px;
+        padding-top: 24px;
+    }
+}
+
+
+/* SMALL MOBILE           */
+@media (max-width: 480px) {
+
+    .cardDetails{
+        padding: 18px;
+    }
+
+    .user h2{
+        font-size: 18px;
+    }
+
+    .reviewPara{
+        font-size: 14px;
+    }
+
+    .user img{
+        width: 50px;
+    }
 }

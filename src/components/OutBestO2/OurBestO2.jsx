@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
 
 
-const OurBestO2 = () => {
+export default function OurBestO2(){
     return (
         <section className={styles.wrapper}>
             <div className={styles.heading}>
@@ -17,12 +17,11 @@ const OurBestO2 = () => {
             <Swiper   modules={[Navigation, Pagination]}
                       navigation
                       pagination={{ clickable: true }}
-                      loop={true}
+                      loop={false}
                       spaceBetween={50}>
                 <SwiperSlide>
                     <div className={styles.card}>
-                        <img src="/Rectangle9.png" alt="background" className={styles.cardBg} />
-
+                        <OurBestO2Svg  className={styles.cardBg} />
                         <div className={styles.content}>
                             <img src="/RoseGoldFeminineCalligraphyMonogramLogo.svg" alt="rose gold feminine calligraphy monogram plant" className={styles.plant}/>
 
@@ -60,6 +59,27 @@ const OurBestO2 = () => {
     );
 };
 
-export default OurBestO2;
 
 
+
+export function OurBestO2Svg(){
+    return(
+        <svg width="1600" height="755" viewBox="0 0 1600 755" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_13009_2)">
+                <rect x="1.5" y="1.5" width="1597" height="752" rx="90.5" fill="white" fillOpacity="0.05" stroke="url(#paint0_linear_13009_2)" strokeWidth="3"/>
+            </g>
+            <defs>
+                <linearGradient id="paint0_linear_13009_2" x1="29.5" y1="43" x2="1571" y2="726.5" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="white" stopOpacity="0.44"/>
+                    <stop offset="0.385" stopOpacity="0"/>
+                    <stop offset="1" stopColor="white" stopOpacity="0.33"/>
+                </linearGradient>
+                <clipPath id="clip0_13009_2">
+                    <rect width="1600" height="755" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+
+
+    )
+}

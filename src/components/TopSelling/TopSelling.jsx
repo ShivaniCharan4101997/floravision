@@ -1,4 +1,4 @@
-import React from 'react';
+import styles from './TopSelling.module.css';
 
 const plants = [
     {
@@ -9,7 +9,7 @@ const plants = [
         link: "#"
     },
     {
-        img: "Plantain.svg",
+        img: "PlantainLilies.svg",
         name: "Plantain Lilies",
         des: "Hostas are primarily grown for their lush, decorative leaves, which come in a wide variety of shapes, sizes,",
         price: "300",
@@ -23,14 +23,14 @@ const plants = [
         link: "#"
     },
     {
-        img: "SwissCheese.svg",
+        img: "SwissChesse.svg",
         name: "Swiss cheese Plant",
         des: "It is a popular tropical houseplant known for its distinctive, perforated leaves,",
         price: "400",
         link: "#"
     },
     {
-        img: "Sansevieria.svg",
+        img: "Sensevieria.svg",
         name: "Sansevieria plant",
         des: "It is a popular indoor plant admired for its striking appearance and low-maintenance nature.",
         price: "450",
@@ -48,63 +48,58 @@ const plants = [
 
 
 
+
+
+
 export default function TopSelling() {
-    return <div
-        style={{
-            paddingTop: "50vh", gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "1rem",
-        }}
-        className="relative grid">
-        {plants.map((p, i) => <Card key={i} data={p} />)}
-    </div>
+    return (
+        <section>
+            <div className={styles.heading}>
+                <img src="/topSellingHeading.svg" alt="our best selling" />
+            </div>
+
+            <div className={styles.cardsGrid}>
+                {plants.map((plant, i) => (
+                    <Card key={i} data={plant} />
+                ))}
+            </div>
+        </section>
+    );
 }
 
 
 export function Card({ data }) {
+    return (
+        <div className={styles.card}>
+            <CurveCardSvg className={styles.bg} />
 
-    const { img, name, des, price, link } = data
+            <img src={data.img} className={styles.plantImg} alt={data.name} />
 
-    const src = `url('${"/Cards/" + img}')`
-
-    return <div className="relative card ">
-        <div className="absolute h-full">
-            <CurveCardSvg height={"740"} />
-        </div>
-        <div className="relative flex justify-center items-center flex-col ">
-            <div className="relative"
-                 style={{
-                     height: "450px",
-                     width: "450px",
-                     backgroundImage: src,
-                     backgroundSize: "500px",
-                     backgroundPosition: "50% 25%"
-                 }}>
-            </div>
-
-            <div
-                style={{ transform: "translatey(-35%)", padding: "3rem 3.5rem" }}
-                className="px-3">
-                <h3 style={{ fontSize: "2rem" }}>{name}</h3>
-                <p style={{ fontSize: "1.25rem" }}>{des}</p>
-                <div style={{
-                    display: "flex",
-                    marginTop: "1rem",
-                    justifyContent: "space-between", alignItems: "center"
-                }}>
-                    <h3 style={{ fontSize: "2rem" }}>Rs. {price}/-</h3>
+            <div className={styles.inner}>
+                <div className={styles.cardContent}>
+                    <h2>{data.name}</h2>
+                    <p>{data.des}</p>
                 </div>
+
+                <div className={styles.bottom}>
+                    <div className={styles.priceBox}>
+                        <h3>Rs. {data.price}/-</h3>
+                    </div>
+
+                    <img src="/Bag.svg" alt="" />
+                </div>
+
             </div>
         </div>
-    </div >
+
+    );
 }
 
 
-function CurveCardSvg(props) {
+export function CurveCardSvg() {
 
-    const { width = "512", height = "631", ...otherProps } = props
-    console.log("height", height)
     return (
-        <svg width={width} height={height} viewBox="0 0 512 631" fill="none" xmlns="http://www.w3.org/2000/svg" {...otherProps}>
+        <svg  viewBox="0 0 512 631" fill="none" xmlns="http://www.w3.org/2000/svg" >
             <path
                 d="M420.961 1.74976C467.994 -4.70936 511 31.3533 511 78.7761V553.47C511 595.444 476.974 629.47 435 629.47H77C35.0264 629.47 1 595.444 1 553.47V78.7761C1.00007 31.3533 44.0061 -4.70937 91.0391 1.74976C142.32 8.79256 205.927 15.8025 256 15.8025C306.073 15.8025 369.68 8.79256 420.961 1.74976Z"
                 fill="white"
@@ -131,4 +126,3 @@ function CurveCardSvg(props) {
         </svg>
     )
 }
-
