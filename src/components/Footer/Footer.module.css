@@ -1,11 +1,10 @@
 
 .footer {
     width: 100%;
-    padding: 2rem 1rem;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 31px;
     font-family: Inter, "sans-serif";
+    display: flex;
+    flex-direction: column;
+
 }
 
 /* TOP */
@@ -13,6 +12,7 @@
     display: grid;
     grid-template-columns: 2fr auto 2fr;
     column-gap: 120px;
+    padding: 60px 30px;
 }
 
 .description { text-align: start;
@@ -44,6 +44,8 @@ h3 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 60px 30px;
+
 }
 
 .socialLinks {
