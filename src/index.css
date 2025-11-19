@@ -74,13 +74,19 @@ html {
 
 body {
     font-family: "Indie Flower",Inter,sans-serif;
-    background: #1b2316;
+    background: #1A2117;
     color: #fff;
     line-height: 1.5;
     overflow-x: hidden;
-    height: 100dvh;
-}
 
+}
+.main{
+    background: url("/heroBg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+   padding: 1.5rem ;
+}
 
 
 /*container*/
@@ -88,7 +94,7 @@ body {
     width: 100%;
     max-width: 1678px;
     margin: 0 auto;
-    padding: 35px ;
+    height: 100dvh;
 }
 
 @media (max-width: 768px) {

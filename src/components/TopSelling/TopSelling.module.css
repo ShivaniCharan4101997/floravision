@@ -1,4 +1,3 @@
-/* ------------------ BASE STYLES ------------------ */
 
 .heading {
     text-align: center;
@@ -13,120 +12,6 @@
     margin-bottom: 300px;
 }
 
-.card {
-    position: relative;
-    width: 512px;
-    height: 644px;
-    font-family: Inter, sans-serif;
-}
-
-/* BG SVG */
-.bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* PLANT IMAGE (20% OUTSIDE THE CARD) */
-.plantImg {
-    width: 459px;
-    height: 459px;
-    position: absolute;
-    top: -20%;
-    left: 50%;
-    transform: translateX(-50%);
-    pointer-events: none;
-}
-
-.inner {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-.cardContent{
-
-}
-.cardContent h2 {
-    font-size: 38px;
-    font-weight: 500;
-    color: var(--dim-white);
-}
-
-.cardContent p {
-    font-size: 24px;
-    color: var(--dim-white);
-    max-width: 90%;
-}
-
-
-
-.bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 24px;
-}
-
-.priceBox {
-    min-height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.bottom h3 {
-    font-size: 38px;
-}
-
-
-.bottom img {
-    width: 55px;
-    height: 55px;
-}
-
-
-/* 1458px */
-@media (max-width: 1458px) {
-
-    .card {
-        width: 412px;
-        height: 544px;
-    }
-
-    .inner {
-        padding: 40px;
-    }
-
-    .plantImg {
-        width: 380px;
-        height: 380px;
-        top: -18%;
-    }
-
-    .cardContent h2 {
-        font-size: 28px;
-    }
-
-    .cardContent p {
-        font-size: 18px;
-    }
-
-    .bottom h3 {
-        font-size: 28px;
-    }
-
-    .bottom img {
-        width: 44px;
-        height: 44px;
-    }
-
-    .priceBox {
-        min-height: 60px;
-    }
-}
 
 /* 1280px */
 @media (max-width: 1280px) {
@@ -136,15 +21,7 @@
         row-gap: 50px;
     }
 
-    .card {
-        width: 380px;
-        height: 500px;
-    }
 
-    .plantImg {
-        width: 330px;
-        height: 330px;
-    }
 }
 
 /* 992px */
@@ -155,10 +32,6 @@
         justify-items: center;
     }
 
-    .card {
-        width: 100%;
-        max-width: 420px;
-    }
 }
 
 /* 768px */
@@ -168,20 +41,6 @@
         grid-template-columns: 1fr;
     }
 
-    .card {
-        width: 90%;
-        max-width: 420px;
-    }
-
-    .inner {
-        padding: 28px;
-    }
-
-    .plantImg {
-        width: 300px;
-        height: 300px;
-        top: -15%;
-    }
 }
 
 /* 480px */
@@ -191,34 +50,5 @@
         margin-bottom: 40px;
     }
 
-    .card {
-        width: 100%;
-        max-width: 350px;
-    }
 
-    .inner {
-        padding: 20px;
-    }
-
-    .cardContent h2 {
-        font-size: 22px;
-    }
-
-    .cardContent p {
-        font-size: 14px;
-    }
-
-    .bottom h3 {
-        font-size: 22px;
-    }
-
-    .priceBox {
-        min-height: 50px;
-        padding: 8px 14px;
-    }
-
-    .bottom img {
-        width: 40px;
-        height: 40px;
-    }
 }

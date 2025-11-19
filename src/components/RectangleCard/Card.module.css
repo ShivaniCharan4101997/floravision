@@ -1,0 +1,91 @@
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 1619px;
+    margin: 0 auto;
+    font-family: Inter, sans-serif;
+}
+
+.card svg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 80px 100px;
+}
+
+.left h3 {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.left p {
+    color: #dcdcdc;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.price {
+    font-size: 26px;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.btns {
+    display: flex;
+    gap: 16px;
+}
+
+
+.cart {
+}
+
+.plant {
+    width: 90%;
+    justify-self: end;
+    transform: translateY(20px);
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 60px 40px;
+    }
+
+    .plant {
+        width: 60%;
+        justify-self: center;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .plant {
+        width: 75%;
+    }
+}
+
+
+
+.reverse .grid {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+
+.reverse .left {
+    direction: ltr;
+}

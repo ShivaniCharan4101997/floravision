@@ -4,6 +4,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation, Pagination } from "swiper/modules";
+import Button from "../../ui/Button.jsx";
+import Slider from "../../ui/Slider.jsx";
 
 
 export default function OurBestO2(){
@@ -32,7 +34,7 @@ export default function OurBestO2(){
                                 <br/>
                                 <p>Many plants can help filter out pollutants and toxins from the air, such as formaldehyde, benzene, and trichloroethylene. This makes the air cleaner and healthier to breathe.</p>
                                 <div className={styles.bottomRow}>
-                                    <button className={styles.exploreBtn}>Explore</button>
+                                  <Button>Explore</Button>
 
                                     <div className={styles.sliderNav}>
                                         <img src="/right-arrow3.svg" alt=""/>
@@ -49,11 +51,7 @@ export default function OurBestO2(){
             </Swiper>
 
         {/*    slider*/}
-            <div className={styles.slidePoint}>
-                <span className={styles.rectangle}></span>
-                <span className={styles.ellipse}></span>
-                <span className={styles.ellipse}></span>
-            </div>
+            <Slider/>
 
         </section>
     );

@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-block: 3rem;
+    column-gap: 60px;
+
 }
 
 .heroContent {
@@ -31,7 +33,6 @@
     color: #ffffff;
 }
 
-/* top part: image + name + stars */
 .userRating {
     display: flex;
     align-items: center;
@@ -72,4 +73,71 @@
 .heroImage{
     width:512px;
     height:719px;
+}
+
+
+.heroText{
+    font-family: Inter, sans-serif;
+    max-width: 793px;
+    width: 100%;
+}
+.heroText h1{
+    font-size: 80px;
+    font-weight: 600;
+}
+.heroText p{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.demo{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.ellipse{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.demo p{
+    font-family: "Indie Flower",Inter,sans-serif;
+    font-size: 22px;
+}
+
+
+
+
+.card {
+    position: relative;
+    width: 512px;
+    height: 644px;
+    font-family: Inter, sans-serif;
+}
+
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.plantImg {
+    width: 459px;
+    height: 459px;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+.inner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
