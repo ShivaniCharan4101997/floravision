@@ -46,12 +46,6 @@ const plants = [
     },
 ]
 
-
-
-
-
-
-
 export default function TopSelling() {
     return (
         <section>

@@ -1,36 +1,34 @@
+
 import styles from "./Card.module.css";
-import Button from "../../ui/Button.jsx";
+import Button from "../../ui/Button/Button.jsx";
 
 export default function TrendyPlantCard({ title, desc, price, img, reverse }) {
     return (
         <div className={`${styles.card} ${reverse ? styles.reverse : ""}`}>
             <TrendyPlantSvgBg />
-
-            <div className={styles.grid}>
+            <div className={styles.content}>
                 <div className={styles.left}>
                     <h3>{title}</h3>
                     <p>{desc}</p>
                     <h4 className={styles.price}>Rs. {price}/-</h4>
 
                     <div className={styles.btns}>
-                       <Button>Explore</Button>
+                        <Button>Explore</Button>
                         <button className={styles.cart}>
                             <img src="/Bag.svg" alt="Add to cart" />
                         </button>
                     </div>
                 </div>
-
+                {/*plantImg*/}
                 <img src={img} alt={title} className={styles.plant} />
             </div>
         </div>
     );
-
 }
-
 
 export function TrendyPlantSvgBg() {
     return (
-        <svg
+        <svg className={styles.bg}
             viewBox="0 0 1619 526"
             preserveAspectRatio="none"
             fill="none"

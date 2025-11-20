@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation, Pagination } from "swiper/modules";
-import Button from "../../ui/Button.jsx";
+import Button from "../../ui/Button/Button.jsx";
 import Slider from "../../ui/Slider.jsx";
 
 

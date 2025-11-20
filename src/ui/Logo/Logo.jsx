@@ -1,4 +1,4 @@
-import styles from "../components/Header/Header.module.css";
+import styles from "./Logo.module.css"
 
 const Logo = () => {
     return (
@@ -12,3 +12,4 @@ const Logo = () => {
 };
 
 export default Logo;
+

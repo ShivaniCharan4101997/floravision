@@ -9,14 +9,18 @@ import TrendyPlants from "./components/TrendyPlants/TrendyPlant.jsx";
 
 const App = () => {
     return (
-        <div className="container">
+        <>
         {/*  header and navbar*/}
-
             <div className="main">
-                <Header />
-                {/*    hero*/}
-                <Hero/>
+                <img src="/heroBg.svg" alt="hero background" className="heroBg"/>
+                <div className="container">
+                    <Header />
+                    {/*    hero*/}
+                    <Hero/>
+                </div>
+
             </div>
+    <div className="container">
 
         {/*    trendy plant*/}
             <TrendyPlants/>
@@ -31,6 +35,7 @@ const App = () => {
         {/*    footer*/}
             <Footer/>
         </div>
+        </>
     );
 };
 

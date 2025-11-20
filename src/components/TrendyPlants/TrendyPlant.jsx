@@ -1,5 +1,4 @@
 import  styles from "./TrendyPlants.module.css"
-
 import TrendyPlantCard from "../RectangleCard/Card.jsx";
 
 export default function TrendyPlants() {
@@ -15,7 +14,7 @@ export default function TrendyPlants() {
                 desc="I recently added a beautiful desk decoration plant to my workspace, and it has made such a positive difference!"
                 price="599"
                 img="/PlantainLilies.svg"
-                reverse={false}
+                reverse={true}
             />
 
             {/* CARD 2 */}
@@ -24,7 +23,7 @@ export default function TrendyPlants() {
                 desc="The greenery adds a touch of nature and serenity to my desk, making it feel more inviting and calming."
                 price="399"
                 img="/trendyPlant2.svg"
-                reverse={true}
+                reverse={false}
             />
         </section>
     );

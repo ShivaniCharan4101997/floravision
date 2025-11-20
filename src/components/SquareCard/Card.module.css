@@ -1,103 +1,180 @@
+/* ------------------------- */
+/*  BASE / MOBILE STYLES    */
+/* ------------------------- */
 
 .card {
     position: relative;
-    width: 512px;
-    height: 644px;
+    width: 90%;
+    max-width: 360px;
+    margin: auto;
     font-family: Inter, sans-serif;
 }
 
-
 .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    inset: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
+/* Plant Image */
 .plantImg {
-    width: 459px;
-    height: 459px;
     position: absolute;
-    top: -20%;
+    top: -22%;
     left: 50%;
     transform: translateX(-50%);
-    pointer-events: none;
+    width: 260px;
 }
 
+/* Card inner content */
 .inner {
     position: absolute;
-    bottom: 0;
+    top: 200px;
     width: 100%;
-}
-.cardContent{
-
-}
-.cardContent h2 {
-    font-size: 38px;
-    font-weight: 500;
+    padding-inline: 22px;
     color: var(--dim-white);
+}
 
+.cardContent h2 {
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .cardContent p {
-    font-size: 24px;
+    font-size: 16px;
     color: var(--dim-white);
-    max-width: 90%;
 }
 
-
-
 .bottom {
+    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 24px;
-}
-
-.priceBox {
-    min-height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
 }
 
 .bottom h3 {
-    font-size: 38px;
+    font-size: 28px;
 }
-
 
 .bottom img {
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
 }
 
-/* 1458px */
-@media (max-width: 1458px) {
 
+/* ------------------------- */
+/*  TABLET (min-width: 600px) */
+/* ------------------------- */
+
+@media (min-width: 600px) {
     .card {
-        width: 412px;
-        height: 544px;
-    }
-
-    .inner {
-        padding: 40px;
+        max-width: 420px;
     }
 
     .plantImg {
-        width: 380px;
-        height: 380px;
-        top: -18%;
+        width: 320px;
+        top: -20%;
+    }
+
+    .inner {
+        top: 240px;
     }
 
     .cardContent h2 {
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .cardContent p {
         font-size: 18px;
     }
+
+    .bottom h3 {
+        font-size: 32px;
+    }
+
+    .bottom img {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+
+@media (min-width: 900px) {
+    .card {
+        max-width: 500px;
+        max-height: 640px;
+    }
+
+    .plantImg {
+        width: 400px;
+        top: -18%;
+    }
+
+    .inner {
+        top: 280px;
+    }
+
+    .cardContent h2 {
+        font-size: 26px;
+    }
+    .cardContent p {
+        font-size: 12px;
+    }
+
+    .cardContent p {
+        font-size: 14px;
+    }
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    margin-top: -10px;
+    }
+
+    .bottom h3 {
+        font-size: 22px;
+    }
+
+    .bottom img {
+        width: 33px;
+        height: 33px;
+        margin-bottom: 3rem;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .card {
+        max-width: 512px;
+        max-height: 644px;
+    }
+
+    .plantImg {
+        width: 460px;
+        top: -20%;
+    }
+
+    .inner {
+        top: 300px;
+        padding-inline: 32px;
+        margin-top: -1rem;
+    }
+
+    .cardContent h2 {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .cardContent p {
+        font-size: 14px;
+    }
+    .bottom{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;}
 
     .bottom h3 {
         font-size: 28px;
@@ -106,84 +183,6 @@
     .bottom img {
         width: 44px;
         height: 44px;
-    }
-
-    .priceBox {
-        min-height: 60px;
-    }
-}
-
-
-@media (max-width: 1280px) {
-    .card {
-        width: 380px;
-        height: 500px;
-    }
-
-    .plantImg {
-        width: 330px;
-        height: 330px;
-    }
-}
-
-
-/* 992px */
-@media (max-width: 992px) {
-
-    .card {
-        width: 100%;
-        max-width: 420px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .card {
-        width: 90%;
-        max-width: 420px;
-    }
-
-    .inner {
-        padding: 28px;
-    }
-
-    .plantImg {
-        width: 300px;
-        height: 300px;
-        top: -15%;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .card {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .inner {
-        padding: 20px;
-    }
-
-    .cardContent h2 {
-        font-size: 22px;
-    }
-
-    .cardContent p {
-        font-size: 14px;
-    }
-
-    .bottom h3 {
-        font-size: 22px;
-    }
-
-    .priceBox {
-        min-height: 50px;
-        padding: 8px 14px;
-    }
-
-    .bottom img {
-        width: 40px;
-        height: 40px;
+        margin-bottom: 2rem;
     }
 }

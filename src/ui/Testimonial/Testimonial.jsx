@@ -1,5 +1,7 @@
-import styles from "../components/Hero/Hero.module.css";
-import Stars from "./stars/Stars.jsx";
+import Stars from "../stars/Stars.jsx";
+
+import styles from "./Testimonial.module.css";
+
 
 const Testimonial = () => {
     return (

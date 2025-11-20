@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
-import Logo from "../../ui/Logo.jsx";
+import Logo from "../../ui/Logo/Logo.jsx";
 import DesktopNav from "./DesktopNav.jsx";
 import MobileNav from "./MobileNav.jsx";
 

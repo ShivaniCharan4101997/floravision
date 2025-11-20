@@ -1,7 +1,6 @@
 import styles from './Hero.module.css';
-import Card from "../SquareCard/Card.jsx";
-import Testimonial from "../../ui/Testimonial.jsx";
-import Button from "../../ui/Button.jsx";
+import Testimonial from "../../ui/Testimonial/Testimonial.jsx";
+import Button from "../../ui/Button/Button.jsx";
 import Slider from "../../ui/Slider.jsx";
 
 const Hero = () => {
@@ -25,18 +24,18 @@ const Hero = () => {
 
            </section>
             <div className={styles.card}>
-                <CurveCardSvg className={styles.bg} />
-                <div className="card-content"></div>
+                <CurveCardSvg  />
                 <img src={"/RoseGoldFeminineCalligraphyMonogramLogo.svg"} className={styles.plantImg} alt="Aglaonema  plant" />
-
                 <div className={styles.inner}>
-             <h1>Indoor Plant</h1>
-                    <h2>Aglaonema  plant</h2>
+                    <h2>Indoor Plant</h2>
+                    <div className={styles.parentDiv}>
+                        <h2>Aglaonema plant</h2>
+                        <img src="/right-arrow2.svg" alt=""/>
+                    </div>
                     <Button>Buy Now</Button>
-                    <Slider/>
+                    <Slider className={styles.ellipse}/>
                 </div>
             </div>
-
         </main>
     );
 };
@@ -44,11 +43,9 @@ const Hero = () => {
 export default Hero;
 
 
-
 export function CurveCardSvg() {
-
     return (
-        <svg  viewBox="0 0 512 631" fill="none" xmlns="http://www.w3.org/2000/svg" >
+        <svg className={styles.bg}  viewBox="0 0 512 631" fill="none" xmlns="http://www.w3.org/2000/svg" >
             <path
                 d="M420.961 1.74976C467.994 -4.70936 511 31.3533 511 78.7761V553.47C511 595.444 476.974 629.47 435 629.47H77C35.0264 629.47 1 595.444 1 553.47V78.7761C1.00007 31.3533 44.0061 -4.70937 91.0391 1.74976C142.32 8.79256 205.927 15.8025 256 15.8025C306.073 15.8025 369.68 8.79256 420.961 1.74976Z"
                 fill="white"
