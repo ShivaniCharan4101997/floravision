@@ -7,7 +7,7 @@ const DesktopNav = () => {
             <a href="#">Home</a>
             <a href="#">
                 Plants type
-                <img src="/public/Polygon_1.png" alt="polygon image" className={styles.polygonImg} />
+                <img src="/Polygon_1.png" alt="polygon image" className={styles.polygonImg} />
             </a>
             <a href="#">More</a>
             <a href="#">Contact</a>
