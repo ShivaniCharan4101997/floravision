@@ -1,21 +1,22 @@
-
-.card {
-    width: 90vw;
-    margin: 2rem auto;
-    min-height: 480px;
+.card{
     position: relative;
-    font-family: Inter, sans-serif;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 755px;
+    border-radius: 15px;
 }
+
 
 .bg {
     position: absolute;
     inset: 0;
-    height: 100%;
     width: 100%;
-    border-radius: inherit;
+    height: 100%;
 }
 
-/* MOBILE LAYOUT */
+
 .content {
     position: absolute;
     inset: 0;
@@ -26,22 +27,23 @@
     text-align: center;
 }
 
-.left{
-    margin-top: -3.5rem;
+/* Text block */
+.left {
+    margin-top: -2rem;
 }
+
 .left h3 {
     font-size: 24px;
     font-weight: 600;
     color: white;
-    margin-top: -1rem;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .left p {
     font-size: 14px;
-    max-width: 100%;
-    color: #dcdcdc;
+    color: #e8e8e8;
     line-height: 1.5;
+    max-width: 320px;
     margin-bottom: 16px;
 }
 
@@ -51,35 +53,42 @@
     margin-bottom: 20px;
 }
 
+/* Buttons */
 .btns {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
-.plant {
-    position: relative;
-    order: -1;
-    height: 280px;
-    object-fit: contain;
-    transform: translateY(-100px);
-}
-.cart{
+/* Cart button */
+.cart {
     height: 40px;
     width: 40px;
-
 }
-.cart img{
+.cart img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
+/* Plant image */
+.plant {
+    order: -1;
+    height: 260px;
+    object-fit: contain;
+    transform: translateY(-90px);
+}
+
 .reverse .plant {
     order: -1;
 }
 
-@media (min-width: 779px) {
+/* ================================= */
+/*         TABLET (min-width 780)    */
+/* ================================= */
+
+@media (min-width: 780px) {
     .card {
         width: 600px;
         min-height: 420px;
@@ -95,14 +104,18 @@
 
     .left p {
         font-size: 16px;
-        max-width: 340px;
+        max-width: 400px;
     }
 
     .plant {
         height: 260px;
-        transform: translateY(-20px);
+        transform: translateY(-40px);
     }
 }
+
+/* ================================= */
+/*    LAPTOP GRID LAYOUT (833px)     */
+/* ================================= */
 
 @media (min-width: 833px) {
     .card {
@@ -113,67 +126,63 @@
 
     .content {
         display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        text-align: left;
+        grid-template-columns: 1.4fr 1fr;
         align-items: center;
-        padding: 40px;
+        text-align: left;
+        padding: 50px;
+        position: absolute;
+        inset: 0;
+    }
+
+    .reverse .content {
+        grid-template-columns: 1fr 1.4fr;
     }
 
     .left {
-        padding-top: 4rem;
-        margin-left: 2rem;
-        grid-column: 1/2;
+        margin-left: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .left h3 {
+        font-size: 34px;
+    }
+
+    .left p {
+        font-size: 18px;
+        max-width: 430px;
+    }
+
+    .price {
+        font-size: 28px;
     }
 
     .btns {
         justify-content: flex-start;
     }
 
+    /* Plant on desktop */
     .plant {
         position: absolute;
-        inset: auto;
         right: 0;
-        top: -40px;
-        height: 380px;
-    }
-
-    .reverse .content {
-        grid-template-columns: 1fr 1.5fr;
-    }
-
-    .reverse .left {
-        grid-column: 2 / 3;
-        text-align: left;
-    }
-
-    .left h3{
-  font-size: 38px;
-    }
-
-
-    .left p {
-        font-size: 20px;
-        font-weight: 600;
-    }
-    .left .price{
-        font-size: 32px;
+        height: 360px;
+        top: -30px;
+        transform: none;
     }
 
     .reverse .plant {
         left: 0;
         right: auto;
-        top: -40px;
     }
-    .cart{
-        height: 60px;
-        width: 60px;
-    }
-    .cart img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+
+    .cart {
+        height: 55px;
+        width: 55px;
     }
 }
+
+/* ================================= */
+/*  LARGE SCREEN (1300px)            */
+/* ================================= */
 
 @media (min-width: 1300px) {
     .card {
@@ -182,19 +191,33 @@
     }
 
     .plant {
-        height: 500px;
-        top: -50px;
+        height: 470px;
+        top: -40px;
+    }
+
+    .left h3 {
+        font-size: 42px;
+    }
+
+    .left p {
+        font-size: 20px;
+    }
+
+    .price {
+        font-size: 32px;
     }
 }
 
+
+
 @media (min-width: 1600px) {
     .card {
-        max-width: 1619px;
+        width: 1619px;
         height: 526px;
     }
 
     .plant {
-        height: 600px;
-        top: -80px;
+        height: 530px;
+        top: -60px;
     }
 }

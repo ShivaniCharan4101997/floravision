@@ -4,7 +4,7 @@ import Button from "../../ui/Button/Button.jsx";
 
 export default function TrendyPlantCard({ title, desc, price, img, reverse }) {
     return (
-        <div className={`${styles.card} ${reverse ? styles.reverse : ""}`}>
+        <div className={`${styles.o2card} ${reverse ? styles.reverse : ""}`}>
             <TrendyPlantSvgBg />
             <div className={styles.content}>
                 <div className={styles.left}>
@@ -25,6 +25,7 @@ export default function TrendyPlantCard({ title, desc, price, img, reverse }) {
         </div>
     );
 }
+
 
 export function TrendyPlantSvgBg() {
     return (

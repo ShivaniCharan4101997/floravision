@@ -2,7 +2,6 @@ import styles from './OurBestO2.module.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-
 import { Navigation, Pagination } from "swiper/modules";
 import Button from "../../ui/Button/Button.jsx";
 import Slider from "../../ui/Slider.jsx";
@@ -22,8 +21,8 @@ export default function OurBestO2(){
                       loop={false}
                       spaceBetween={50}>
                 <SwiperSlide>
-                    <div className={styles.card}>
-                        <OurBestO2Svg  className={styles.cardBg} />
+                    <div className={styles.o2card}>
+                        <OurBestO2Svg/>
                         <div className={styles.content}>
                             <img src="/RoseGoldFeminineCalligraphyMonogramLogo.svg" alt="rose gold feminine calligraphy monogram plant" className={styles.plant}/>
 
@@ -59,10 +58,9 @@ export default function OurBestO2(){
 
 
 
-
 export function OurBestO2Svg(){
     return(
-        <svg width="1600" height="755" viewBox="0 0 1600 755" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={styles.bg} viewBox="0 0 1600 755" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_13009_2)">
                 <rect x="1.5" y="1.5" width="1597" height="752" rx="90.5" fill="white" fillOpacity="0.05" stroke="url(#paint0_linear_13009_2)" strokeWidth="3"/>
             </g>
@@ -77,7 +75,5 @@ export function OurBestO2Svg(){
                 </clipPath>
             </defs>
         </svg>
-
-
     )
 }

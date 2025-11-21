@@ -1,13 +1,9 @@
-
-
-/*testimonial card*/
 .testimonialCard {
-    width: 409px;
-    height: 237px;
+    width: 100%;
+    max-width: 409px;
     padding: 34px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
     border-radius: 28px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow:
@@ -18,54 +14,107 @@
     flex-direction: column;
     gap: 20px;
     color: #ffffff;
+    height: auto;
 }
+
+/* USER ROW */
 .userRating {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .userImage {
     width: 64px;
     height: 64px;
     border-radius: 50%;
     overflow: hidden;
 }
+
 .userImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .userName h2 {
     font-size: 22px;
-    font-family: Inter, sans-serif;
     font-weight: 600;
     margin-bottom: 6px;
 }
+
 .userFeedback {
-    font-family: Inter, sans-serif;
     font-size: 16px;
     line-height: 1.4;
     opacity: 0.9;
     text-align: left;
 }
 
-@media (max-width:830px) {
-    .testimonialCard{
-        margin: -5rem auto 0 auto;
-    }
-}
 
-@media (max-width:635px) {
-    .testimonialCard{
-        margin: -8rem auto 0 auto;
-    }
-}
 
-@media (max-width:440px) {
+@media (max-width: 830px) {
     .testimonialCard {
-        width: 309px;
-        height: 237px;
-        padding: 24px;
-        margin: -8rem auto 0 auto;
+        margin: 2rem auto 0 auto;
+        padding: 28px;
+    }
+
+    .userName h2 {
+        font-size: 20px;
+    }
+
+    .userFeedback {
+        font-size: 15px;
+        line-height: 1.35;
+    }
+}
+
+
+
+@media (max-width: 635px) {
+    .testimonialCard {
+        margin: 3rem auto 0 auto;
+        padding: 26px;
+        max-width: 360px;
+    }
+
+    .userImage {
+        width: 56px;
+        height: 56px;
+    }
+
+    .userName h2 {
+        font-size: 18px;
+    }
+
+    .userFeedback {
+        font-size: 14px;
+    }
+}
+
+
+
+@media (max-width: 440px) {
+    .testimonialCard {
+        max-width: 300px;
+        padding: 22px;
+        margin: 3rem auto 0 auto;
+    }
+
+    .userRating {
+        gap: 14px;
+    }
+
+    .userImage {
+        width: 50px;
+        height: 50px;
+    }
+
+    .userName h2 {
+        font-size: 17px;
+    }
+
+    .userFeedback {
+        font-size: 13px;
+        line-height: 1.35;
     }
 }

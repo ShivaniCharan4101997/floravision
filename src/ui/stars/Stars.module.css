@@ -1,8 +1,24 @@
 .starRating {
     display: flex;
     gap: 6px;
+    align-items: center;
 }
+
 .starRating img {
     width: 16px;
     height: 16px;
+    aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 430px) {
+    .starRating {
+        gap: 3px;
+        width: 100px;
+        padding-top: 10px;
+    }
+
+    .starRating img {
+        width: 10px;
+        height: 10px;
+    }
 }

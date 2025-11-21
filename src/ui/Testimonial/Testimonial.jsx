@@ -13,15 +13,14 @@ const Testimonial = () => {
 
                 <div className={styles.userName}>
                     <h2>Ronnie Hamill</h2>
-
                   <Stars/>
                 </div>
             </div>
 
-            <div className={styles.userFeedback}>
+            <p className={styles.userFeedback}>
                 I can't express how thrilled I am with my new natural plants!
                 They bring such a fresh and vibrant energy to my home.
-            </div>
+            </p>
         </div>
     );
 };

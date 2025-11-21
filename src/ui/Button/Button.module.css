@@ -6,13 +6,24 @@
     font-size: 22px;
     color: var(--dim-white);
     background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
 }
 
-/* Responsive */
 @media (max-width: 830px) {
     .btn {
-        width: 120px;
-        height: 40px;
+        width: 150px;
+        height: 48px;
         font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 130px;
+        height: 42px;
+        font-size: 16px;
     }
 }
